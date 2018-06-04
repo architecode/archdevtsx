@@ -1,0 +1,12 @@
+# Folders 
+node_modules/
+_scripts/
+src/
+
+# Files
+.gitignore
+*.yml
+package-lock.json
+README.md
+tsconfig.json
+tslint.json

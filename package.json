@@ -1,0 +1,42 @@
+{
+  "name": "archdevtsx",
+  "version": "0.0.1-alpha.1",
+  "description": "Architecode TSX-Based React Project",
+  "private": true,
+  "main": "./index.js",
+  "scripts": {
+    "build": "npm run cleanup && npm run build-ts && npm run build-es",
+    "build-ts": "npm run tslint && tsc --emitDeclarationOnly",
+    "build-es": "babel ./src --out-dir . --extensions \".ts,.tsx\" --ignore *.test.js",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "cleanup": "node _scripts/cleanup",
+    "aftertests": "node _scripts/aftertests",
+    "cix-lic": "cix-lic --conf"
+  },
+  "author": "Architecode Corporation",
+  "license": "MIT",
+  "repository": "git+https://github.com/architecode/archdevtsx",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.49",
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.49",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.49",
+    "@babel/preset-react": "^7.0.0-beta.49",
+    "@babel/preset-typescript": "^7.0.0-beta.49",
+    "@types/react": "^16.3.16",
+    "cix-lic": "^2.1.0-alpha.1",
+    "react": "^16.4.0",
+    "shelljs": "^0.8.2",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.1"
+  },
+  "peerDependencies": {
+    "react": "^16.4.0"
+  },
+  "cix-lic": {
+    "baseDir": "./dst",
+    "beginYear": "2018"
+  }
+}
