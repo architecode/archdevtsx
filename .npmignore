@@ -1,7 +1,7 @@
 # Folders 
-node_modules/
-_scripts/
-src/
+/node_modules
+/_scripts
+/src
 
 # Files
 .gitignore
